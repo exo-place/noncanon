@@ -1,0 +1,5 @@
+[package]
+name = "noncanon-core"
+version = "0.1.0"
+edition = "2021"
+description = "Local-first collaborative worldbuilding — canon as what you choose to pull in"

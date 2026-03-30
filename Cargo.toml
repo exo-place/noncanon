@@ -1,0 +1,3 @@
+[workspace]
+members = ["crates/noncanon-core"]
+resolver = "2"
