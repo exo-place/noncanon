@@ -1,19 +1,21 @@
 # TODO
 
-## Design (decide before writing code)
+## Design (resolved)
 
-- [ ] Git backend: `gitoxide` vs `libgit2` vs raw git subprocess?
-- [ ] What is the atomic unit of world-content? (file? object? named entity?)
-- [ ] How are worlds addressed? (URL? hash? human-readable name?)
-- [ ] What does "pull in" mean at the API level? (cherry-pick? merge? submodule?)
-- [ ] Sparse model: how do you declare what you need without fetching the rest?
-- [ ] Canon metadata: where does "I accept this" get recorded?
+- [x] Git backend: `gitoxide`
+- [x] Atomic unit: object — files are the on-fs representation, not the primitive
+- [x] Addressing: git remotes (standard git addressing)
+- [x] "Pull in": expose multiple actions (not one fixed operation)
+- [x] Sparse model: expose git's sparse mechanisms + optional metadata filtering (tags etc., not limited to tags)
+- [x] Canon metadata: implicit — if you pulled it in, it's canon. No explicit record needed.
 
 ## Initial implementation
 
-- [ ] Core data model: world, content unit, canon record
-- [ ] Basic git operations wrapped with canon semantics
-- [ ] Address/reference resolution
+- [ ] Core data model: world, object
+- [ ] Wrap gitoxide with canon-aware operations
+- [ ] Address/reference resolution via git remotes
+- [ ] Basic pull operations (multiple action variants)
+- [ ] Metadata filtering for sparse fetch
 
 ## Later
 
